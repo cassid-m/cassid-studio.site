@@ -461,10 +461,25 @@ body::before {
   }
 
   .img-carousel-container {
-    max-width: 375px;
-    height: auto; /* 画像の高さが潰れないようにautoに */
+    width: 100%;
+    max-width: 100%; /* max-widthの制限を解除 */
+    padding-left: 0;
+    padding-right: 0;
     margin-left: 0;
     margin-right: 0;
+  }
+
+  /* 2. Swiper自体の横幅・余白調整 */
+  .mySwiper {
+    width: 100%;
+    padding: 10px 0; /* 上下に少し余白を残し、左右は0にする */
+  }
+
+  /* 3. 画像をスライド幅いっぱいに広げる */
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .sample {

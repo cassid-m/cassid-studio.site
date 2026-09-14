@@ -444,13 +444,6 @@ body::before {
     display: block;
   }
 
-  /* .img-carousel-container {
-    max-width: 375px;
-    height: auto;
-    margin-left: 0;
-    margin-right: 0;
-  } */
-
   .sample {
     display: flex;
     flex-direction: column;
