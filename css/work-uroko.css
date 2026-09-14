@@ -1,0 +1,485 @@
+body {
+  font-family: "Reddit Sans Condensed", "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #3a3a3a;
+  background-color: #f3f3f3;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/top/back-img.png");
+  background-size: 5%;
+  background-position: center;
+  background-repeat: repeat;
+  opacity: 0.5;
+  z-index: -3;
+}
+/* buttonセクション */
+.close-btn {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-top: 30px;
+  margin-right: 80px;
+  margin-left: auto;
+}
+
+.close-btn button {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #3a3a3a;
+  background-color: #f3f3f3;
+  color: #3a3a3a;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.close-btn button:hover {
+  background-color: #3a3a3a;
+  color: #f3f3f3;
+}
+
+/* FVセクション */
+
+.fv {
+  max-width: 100vw;
+  height: 100vh;
+}
+
+.fv-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.work-fv {
+  max-width: 680px;
+  height: 520px;
+  margin-top: 80px;
+  margin-left: 50px;
+  margin-right: 60px;
+}
+
+.fv-textarea {
+  text-align: left;
+  margin-top: 80px;
+  margin-right: 50px;
+}
+
+.position-tag {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.text-white,
+.text-black {
+  text-align: center;
+  margin-right: 20px;
+  font-size: 14px;
+  padding: 8px;
+  border: #3a3a3a 1px solid;
+  border-radius: 5%;
+}
+
+.text-white {
+  color: #f3f3f3;
+  background-color: #3a3a3a;
+}
+
+.category,
+.r-price {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.site-title {
+  display: block;
+  margin-bottom: 16px;
+  font-family:
+    Zen Kaku Gothic New,
+    sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.r-price::after {
+  content: "";
+  display: block;
+  width: 620px;
+  height: 1px;
+  margin-top: 10px;
+  background-color: #3a3a3a;
+}
+
+.expl {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 170%;
+  letter-spacing: 0.08em;
+}
+
+.work-link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: auto;
+  width: fit-content;
+}
+
+.work-link a {
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.work-link a::before {
+  content: "▶︎";
+  color: #e67c69;
+  margin-right: 5px;
+}
+
+.work-link a:hover {
+  color: #e67c69;
+  transition-duration: 0.5s;
+}
+
+/* work-expl-subpageセクション */
+
+.subpage-content {
+  display: block;
+  margin: 0px 80px;
+}
+
+.subpage {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 80px;
+}
+
+.subpage-title {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 24px;
+  font-size: 30px;
+  letter-spacing: 0.04em;
+  color: #e67c69;
+}
+
+.subpage-title::before {
+  content: "";
+  display: inline-block;
+  align-items: center;
+  width: 1px;
+  height: 20px;
+  top: 0;
+  margin-right: 10px;
+  background-color: #e67c69;
+}
+
+.subpage-text {
+  font-family:
+    Zen Kaku Gothic New,
+    sans-serif;
+  font-size: 17px;
+  line-height: 170%;
+  letter-spacing: 0.07em;
+}
+
+.persona {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.link-icon {
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.software-img {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 10px;
+}
+
+.subpage-img {
+  width: 40px;
+  height: 40px;
+}
+
+.subpage-img.studio {
+  width: 80px;
+  height: 20px;
+}
+
+/* 外枠のサイズ調整 */
+.img-carousel-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* スライド要素の設定 */
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* コントローラーの配置（画像下中央に配置） */
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+/* デフォルトのSwiper矢印デザインをリセット・カスタマイズ */
+.swiper-button-prev,
+.swiper-button-next {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none; /* デフォルトの大きな矢印アイコンを非表示 */
+}
+
+.swiper-button-play-toggle {
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+}
+
+.sample {
+  display: flex;
+  margin-top: 20px;
+}
+
+.sample h4 {
+  display: inline-block;
+  padding: 10px;
+  margin-right: 10px;
+  background-color: #3a3a3a;
+  border-radius: 5px;
+  color: #f3f3f3;
+}
+
+.sample p {
+  align-items: center;
+  margin: 0;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.ja01 {
+  font-family: "BIZ UDPMincho", serif;
+}
+
+.ja02 {
+  font-family: "hiragino-kaku-gothic-pron", sans-serif;
+}
+
+.en01 {
+  font-family: "Newsreader", serif;
+}
+
+.color01 {
+  color: #1f3565;
+}
+
+.color02 {
+  color: #faf9f6;
+  text-shadow: #b1b1b1 2px 1px 1px;
+}
+
+.color03 {
+  color: #131313;
+}
+
+.color04 {
+  color: #e9e4e4;
+  text-shadow: #b1b1b1 1px 1px 1px;
+}
+
+.color05 {
+  color: #730b1d;
+}
+
+.color06 {
+  color: #bdab83;
+}
+
+/* ==========================================
+  レスポンシブ
+========================================== */
+
+@media (max-width: 768px) {
+  body {
+    max-width: 100vw;
+  }
+
+  .close-btn button {
+    position: fixed;
+    display: block;
+    top: 20px;
+    right: 15px;
+    z-index: 100;
+    cursor: pointer;
+  }
+
+  .fv {
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 40px; /* 下部に適度な余白を作る */
+  }
+
+  .fv-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 345px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  .work-fv {
+    max-width: 345px;
+    height: auto; /* 画像の高さが潰れないようにautoに */
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .work-fv-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0; /* 二重の余白を防ぐ */
+  }
+
+  .fv-textarea {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 345px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .position-tag {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    text-align: center;
+    white-space: nowrap;
+    margin-bottom: 20px;
+  }
+
+  .text-white,
+  .text-black {
+    text-align: center;
+    margin-right: 0; /* 調整 */
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .category,
+  .r-price,
+  .expl,
+  .subpage-text,
+  .sample {
+    font-size: 14px;
+  }
+
+  .site-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .r-price::after {
+    width: 100%; /* マージンに合わせて可変に */
+    max-width: 345px;
+    height: 1px;
+    margin-top: 5px;
+    margin: 20px 0;
+  }
+
+  .work-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 0;
+    margin-right: auto;
+    margin-bottom: 0; /* 下部の余白は親か次の要素で調整 */
+    width: fit-content;
+    gap: 12px;
+  }
+
+  /* 下部コンテンツ（subpage-content）のスマホ用マージン整理 */
+  .subpage-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 345px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px; /* FVとの間にしっかりスペースを確保する */
+  }
+
+  .subpage-title {
+    font-size: 19px;
+  }
+
+  .subpage-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .img-carousel-container {
+    max-width: 375px;
+    height: auto; /* 画像の高さが潰れないようにautoに */
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .sample {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .link-icon {
+    display: block;
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+    font-size: 10px;
+  }
+}

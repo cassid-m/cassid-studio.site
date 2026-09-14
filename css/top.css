@@ -1,0 +1,507 @@
+body {
+  font-family: "Reddit Sans Condensed", "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #3a3a3a;
+  background-color: #f3f3f3;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../img/top/back-img.png");
+  background-size: 5%;
+  background-position: center;
+  background-repeat: repeat;
+  opacity: 0.5;
+  z-index: -3;
+}
+
+/* FVセクション */
+
+.fv {
+  max-width: 100vw;
+  height: 100vh;
+}
+
+.fv-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fv-textarea {
+  margin-top: 280px;
+  margin-left: 80px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: 0.02em;
+}
+
+/* navセクション */
+
+.fv-nav {
+  position: fixed;
+  text-decoration: none;
+  font-size: 15px;
+  margin-top: 500px;
+  margin-left: 80px;
+  z-index: 10;
+  color: #a4a4a4;
+  text-shadow: 0.5px 0px 0.5px #f3f3f3;
+}
+
+.nav-list a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.nav-list a::after {
+  content: "";
+  width: 0px;
+  height: 1px;
+  margin-left: 10px;
+  background-color: #a4a4a4;
+  transition: width 0.5s ease-in-out;
+  transition-delay: 0.3s;
+}
+
+.nav-list a:hover::after {
+  width: 40px;
+}
+
+.nav-list img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.list-border {
+  display: flex;
+  width: 124px;
+  height: 1px;
+  margin-bottom: 15px;
+  background-color: #a4a4a4;
+}
+
+.fv-img-tower {
+  width: 660px;
+  height: 100vh;
+  z-index: -2;
+}
+
+/* WORK一覧セクション */
+
+.work-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin: 200px auto 0px auto;
+}
+
+.work-content-list {
+  transition:
+    opacity 0.4s ease,
+    transform 0.3s ease;
+}
+
+.content-textarea {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  z-index: -1;
+}
+
+.site-title {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.site-title::after {
+  content: "";
+  display: flex;
+  width: 20px;
+  height: 1px;
+  margin: 10px 0;
+  background-color: #3a3a3a;
+}
+
+.site-tag {
+  display: flex;
+  margin-right: 15px;
+}
+
+.list-link {
+  display: inline-block;
+  width: 1000px;
+  height: auto;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.work-list-img {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  filter: saturate(0); /* 白黒 */
+  z-index: 2;
+  transition:
+    filter 0.3s ease,
+    transform 0.3s ease;
+}
+
+.work-list-img:hover {
+  opacity: 30%;
+  transition:
+    opacity 0.4s ease-in-out,
+    visibility 0.4s ease; /* ふわっと表示 */
+}
+
+.hover-img {
+  position: fixed; /* 画面全体に固定 */
+  top: 0;
+  left: 0;
+  width: 100vw; /* 画面幅いっぱい */
+  height: 90vh; /* 画面高さいっぱい */
+  object-fit: cover; /* 縦横比を保って画面を覆う */
+  z-index: 0; /* 最前線に配置 */
+  opacity: 0; /* 初期状態は透明 */
+  visibility: hidden; /* クリック等のイベントを無効化 */
+  pointer-events: none; /* 下の要素の操作を邪魔しない */
+  transition:
+    opacity 0.4s ease-in-out,
+    visibility 0.4s ease; /* ふわっと表示 */
+}
+
+/* ==========================================
+  3. 画像（.work-list-img）にホバーした時の挙動
+========================================== */
+
+/* 1. 画像（.work-list-img）にホバーした時だけ、背景の .hover-img を表示 */
+.work-content-list:has(.work-list-img:hover) .hover-img {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 2. 画像にホバーした時、その画像自体の不透明度を下げる */
+.work-list-img:hover {
+  opacity: 0;
+  filter: saturate(100%); /* ホバーした画像のみカラー化 */
+}
+
+/* 3. いずれかの画像にホバーが入ったら、他のカード全体を薄くする */
+.work-content:has(.work-list-img:hover) .work-content-list {
+  opacity: 0;
+}
+
+/* 4. ホバーされている画像を持っているカードだけは不透明度100%を維持 */
+.work-content-list:has(.work-list-img:hover) {
+  opacity: 1 !important;
+}
+
+/* フッターセクション */
+.footer-content {
+  display: inline-block;
+  background-image: url(../img/top/footer-img.png);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 280px;
+  margin-top: 240px;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.footer-text {
+  margin-top: 100px;
+  margin-bottom: 40px;
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.mail-link {
+  letter-spacing: 0.06em;
+}
+
+.copy {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 10px;
+  color: #a4a4a4;
+}
+
+/* ==========================================
+  レスポンシブ
+========================================== */
+/* PC時（769px以上）はスマホ用ボタンを隠す */
+@media (min-width: 769px) {
+  .sp-menu-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    max-width: 100vw;
+  }
+
+  .fv-content {
+    width: 100vw;
+    height: 100vh; /* 画面の高さいっぱいに設定 */
+    position: relative;
+  }
+
+  .fv-textarea {
+    position: absolute;
+    margin-top: 200px;
+    margin-left: 15px;
+    margin-right: auto;
+    font-size: 14px;
+    line-height: 1.8;
+    z-index: 1;
+  }
+
+  .sp-menu-btn {
+    position: fixed;
+    top: 20px;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+    padding: 0;
+    text-shadow: #f3f3f3 0px 1px;
+  }
+
+  /* 2本線（上20px / 下25px） */
+  .hamburger-icon {
+    width: 25px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .hamburger-icon span {
+    display: block;
+    height: 1px;
+    background-color: #3a3a3a;
+    box-shadow: #f3f3f3 0px 1px;
+  }
+
+  .hamburger-icon span:nth-child(1) {
+    width: 20px;
+  }
+
+  .hamburger-icon span:nth-child(2) {
+    width: 25px;
+  }
+
+  .sp-menu-btn .btn-text {
+    font-size: 11px;
+    letter-spacing: 0.05em;
+  }
+
+  .list-border {
+    display: none;
+  }
+
+  /* ------------------------------------------
+    3. 通常時のナビゲーション（MailとBack to TOPを表示）
+  ------------------------------------------ */
+  .fv-nav {
+    position: absolute !important;
+    top: 65px !important; /* MENUテキストのすぐ下に配置 */
+    left: 15px !important;
+    margin-top: 0 !important; /* PC用の margin-top: 500px をリセット */
+    margin-left: 0 !important;
+    z-index: 100;
+  }
+
+  /* Mail と Back to TOP のリンク表示設定 */
+  .fv-nav ul {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Mail と Back to TOP の縦間隔 */
+    padding: 0;
+    margin: 0;
+  }
+
+  .fv-nav .nav-list a {
+    margin-bottom: 0 !important; /* PC用の margin-bottom: 20px を解除 */
+  }
+
+  /* 通常時：Profile(01), Service(02), Form(03), Instagram(05)を非表示 */
+  .fv-nav .nav-list[class*="01"],
+  .fv-nav .nav-list[class*="02"],
+  .fv-nav .nav-list[class*="03"],
+  .fv-nav .nav-list[class*="05"] {
+    display: none !important;
+  }
+
+  /* 通常時：Mail(04) と Back to TOP(06) を表示 */
+  .fv-nav .nav-list[class*="04"],
+  .fv-nav .nav-list[class*="06"] {
+    display: flex !important;
+  }
+  /* ------------------------------------------
+    4. MENUが開いた時（is-active付与時）全画面表示
+  ------------------------------------------ */
+  .fv-nav.is-active {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+
+    /* ★ここを追加：PC用のマージン（margin-top: 500pxなど）を消す */
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background-color: #f3f3f3 !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    z-index: 999 !important;
+  }
+
+  /* ★ここを追加：リスト全体を画面中央に整列させる */
+  .fv-nav.is-active ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px; /* メニュー項目同士の縦の間隔（お好みで調整） */
+    padding: 0;
+    margin: 0;
+  }
+
+  /* 開いた時は全リストを表示させる */
+  .fv-nav.is-active .nav-list,
+  .fv-nav.is-active .list-border {
+    display: flex !important;
+  }
+
+  /* ボタンが「✕」に変わる処理 */
+  .sp-menu-btn.is-active {
+    position: fixed;
+    top: 20px;
+    right: 15px;
+    left: auto;
+    z-index: 1000;
+  }
+
+  .sp-menu-btn.is-active .hamburger-icon span:nth-child(1) {
+    width: 25px;
+    transform: translateY(5px) rotate(45deg);
+  }
+
+  .sp-menu-btn.is-active .hamburger-icon span:nth-child(2) {
+    transform: translateY(-5px) rotate(-45deg);
+  }
+
+  .sp-menu-btn.is-active .btn-text {
+    display: none;
+    font-size: 11px;
+  }
+
+  .fv-nav img {
+    width: 15px;
+    height: 15px;
+  }
+
+  /* 東京タワーの画像 */
+  .fv-img {
+    position: relative;
+    display: inline-block;
+    width: 400px;
+    height: 680px;
+    margin-left: 80px;
+    z-index: 0;
+  }
+
+  .fv-img-tower {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 縦横比を保ったまま100vhにフィット */
+  }
+
+  /* workセクション */
+  .content-textarea {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    top: 40px;
+    font-size: 15px;
+  }
+
+  .site-tag {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    gap: 5px;
+  }
+
+  .list-link {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .hover-img {
+    display: none !important;
+    margin-top: 50px;
+  }
+
+  .work-list-img {
+    display: none;
+  }
+
+  .work-content {
+    max-width: 330px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .work-content-list .hover-img {
+    display: block !important;
+    position: static;
+    max-width: 100%;
+    height: 240px;
+    top: 0;
+    margin-bottom: 40px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .work-content-list,
+  .work-content:has(.work-list-img:hover) .work-content-list {
+    opacity: 1 !important;
+  }
+}
