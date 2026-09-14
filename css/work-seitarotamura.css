@@ -423,7 +423,7 @@ body::before {
   }
 
   .img-carousel-container {
-    max-width: 100%;
+    max-width: 400px;
     height: auto; /* 画像の高さが潰れないようにautoに */
     margin-left: 0;
     margin-right: 0;
