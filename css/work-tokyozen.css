@@ -136,7 +136,7 @@ body::before {
 
 .under-line {
   display: block;
-  width: 620px;
+  width: 700px;
   margin-bottom: 10px;
   border: #3a3a3a dashed 0.9px;
 }
