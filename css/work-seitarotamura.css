@@ -423,7 +423,7 @@ body::before {
   }
 
   /* スライダー全体の包み要素（枠線のある領域） */
-  .img-carousel-container {
+  .swiper-wrapper {
     /* ※実際のクラス名に合わせて変更してください */
     width: 100%;
     margin: 0 auto;
