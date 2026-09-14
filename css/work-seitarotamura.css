@@ -423,7 +423,7 @@ body::before {
   }
 
   /* スライダー全体の包み要素（枠線のある領域） */
-  .slide-container {
+  .swiper-wrapper {
     /* ※実際のクラス名に合わせて変更してください */
     width: 100%;
     padding: 10px 0; /* 左右の余白を失くして横幅を大きく伸ばす */
@@ -431,7 +431,7 @@ body::before {
   }
 
   /* スライド内の画像 */
-  .slide-container img {
+  .swiper-slide img {
     width: 100%;
     height: auto;
     object-fit: contain;
