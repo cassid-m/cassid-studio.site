@@ -209,7 +209,7 @@ body::before {
 }
 
 .category-list {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
@@ -236,7 +236,7 @@ body::before {
 .category-list-item.design::after,
 .category-list-item.delivery-special::after {
   content: "→";
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   font-size: 11px;
@@ -244,8 +244,8 @@ body::before {
   margin-right: 8px;
 }
 
-.subject-plan.special {
-  margin-top: 20px;
+.subject-plan.standard {
+  margin-bottom: 20px;
 }
 
 .subject-tag {
