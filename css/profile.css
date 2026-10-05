@@ -210,6 +210,8 @@ body::before {
 
 .category-list {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 8px;
   font-size: 14px;
 }
@@ -232,11 +234,13 @@ body::before {
 .category-list-item.hearing::after,
 .category-list-item.planning::after,
 .category-list-item.design::after,
-.category-list-item.elivery-special::after {
+.category-list-item.delivery-special::after {
   content: "→";
   display: block;
+  align-items: center;
   text-align: center;
   font-size: 11px;
+  top: 0;
   margin-right: 8px;
 }
 
