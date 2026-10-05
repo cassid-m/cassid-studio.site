@@ -193,35 +193,34 @@ body::before {
   background-color: #3a3a3a;
 }
 
-.subject-plan {
-  display: f1ex;
-  flex-direction: column;
-}
-
 .plan-title {
-  display: inline-block;
-  border: #3a3a3a 1px solid;
-  padding: 10px 10px;
+  display: block;
+  width: fit-content;
   margin-bottom: 10px;
-  font-weight: 400;
+  border: 1px solid #3a3a3a;
   font-size: 12px;
+  font-weight: 400;
   text-align: center;
 }
 
 .category-list {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 8px;
   font-size: 14px;
 }
 
+.category-list-item {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
 .item-icon {
-  display: inline-block;
   width: 20px;
-  height: 20px;
+  height: auto;
   margin-right: 3px;
-  font-size: 13px;
+  flex-shrink: 0;
 }
 
 .item-icon img {
@@ -231,17 +230,10 @@ body::before {
   justify-content: center;
 }
 
-.category-list-item.hearing::after,
-.category-list-item.planning::after,
-.category-list-item.design::after,
-.category-list-item.delivery-special::after {
+.category-list-item:not(:last-child)::after {
   content: "→";
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  margin-left: 8px;
   font-size: 11px;
-  top: 0;
-  gap: 8px;
 }
 
 .subject-plan.standard {
