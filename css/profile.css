@@ -208,7 +208,7 @@ body::before {
 }
 
 .category {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   gap: 8px;
   font-size: 12px;
@@ -226,17 +226,15 @@ body::before {
   height: 100%;
 }
 
-.icon-text.hearing,
-.icon-text.planning,
-.icon-text.design,
-.icon-text.delivery-sp::after {
+.category.hearing,
+.category.planning,
+.category.design,
+.category.delivery-sp::after {
   content: "→";
   display: inline-block;
-  font-size: 11px;
   text-align: center;
-  justify-content: center;
-  top: 0;
-  right: 8px;
+  font-size: 11px;
+  margin-right: 8px;
 }
 
 .subject-plan.special {
