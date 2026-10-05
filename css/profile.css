@@ -169,7 +169,7 @@ body::before {
 
 .textarea-content-en,
 .subject-tag,
-.category.maintenance {
+.subject-plan.special {
   margin-bottom: 80px;
   font-size: 14px;
   letter-spacing: 0.07em;
@@ -209,16 +209,16 @@ body::before {
 
 .category {
   display: inline-flex;
-  flex-direction: row;
   gap: 8px;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .category-icon {
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 20px;
+  height: 20px;
   margin-right: 3px;
+  font-size: 13px;
 }
 
 .category-icon img {
@@ -231,7 +231,7 @@ body::before {
 .category.design,
 .category.delivery-sp::after {
   content: "→";
-  display: inline-block;
+  display: block;
   text-align: center;
   font-size: 11px;
   margin-right: 8px;
