@@ -200,7 +200,6 @@ body::before {
   box-sizing: border-box;
   height: auto;
   padding: 10px;
-  margin: 0 0 10px;
   border: 1px solid #3a3a3a;
   font-size: 12px;
   font-weight: 400;
