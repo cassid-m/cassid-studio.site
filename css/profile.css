@@ -207,7 +207,7 @@ body::before {
   min-width: 80px;
   box-sizing: border-box;
   height: auto;
-  padding: 10px;
+  padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #3a3a3a;
   font-size: 13px;
