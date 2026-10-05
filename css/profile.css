@@ -209,7 +209,7 @@ body::before {
   height: auto;
   padding: 8px;
   margin-bottom: 10px;
-  margin-left: 15px;
+  margin-left: 10px;
   border: 1px solid #3a3a3a;
   font-size: 13px;
   font-weight: 500;
@@ -563,8 +563,19 @@ body::before {
     font-weight: 500;
   }
 
+  .subject-plan,
   .subject-tag {
     flex-direction: column;
+  }
+
+  .category-list-item:not(:last-child)::after {
+    content: "↓";
+    margin-top: 8px;
+    font-size: 9px;
+  }
+
+  .item-icon {
+    width: 15px;
   }
 
   .footer-content {
