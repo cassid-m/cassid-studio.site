@@ -198,6 +198,7 @@ body::before {
 }
 
 .plan-title {
+  display: inline-block;
   border: #3a3a3a 1px solid;
   padding: 5px 5px;
   margin-bottom: 10px;
@@ -205,12 +206,13 @@ body::before {
 
 .category {
   display: flex;
+  flex-direction: row;
   gap: 8px;
   font-size: 12px;
 }
 
 .category-icon {
-  display: block;
+  display: inline-block;
   width: 15px;
   height: 15px;
   margin-right: 3px;
@@ -226,6 +228,7 @@ body::before {
 .icon-text.design,
 .icon-text.delivery-sp::after {
   content: "→";
+  display: inline-block;
   font-size: 11px;
   text-align: center;
   justify-content: center;
