@@ -168,7 +168,8 @@ body::before {
 }
 
 .textarea-content-en,
-.subject-tag {
+.subject-tag,
+.category.maintenance {
   margin-bottom: 80px;
   font-size: 14px;
   letter-spacing: 0.07em;
@@ -202,6 +203,8 @@ body::before {
   border: #3a3a3a 1px solid;
   padding: 5px 5px;
   margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 12px;
 }
 
 .category {
@@ -234,6 +237,10 @@ body::before {
   justify-content: center;
   top: 0;
   right: 8px;
+}
+
+.subject-plan.special {
+  margin-top: 20px;
 }
 
 .subject-tag {
