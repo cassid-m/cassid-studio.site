@@ -201,8 +201,8 @@ body::before {
   height: auto;
   padding: 10px;
   border: 1px solid #3a3a3a;
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 13px;
+  font-weight: 500;
   line-height: 1;
   text-align: center;
 }
