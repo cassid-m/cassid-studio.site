@@ -206,14 +206,15 @@ body::before {
 .category-list {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 8px;
-  font-size: 14px;
 }
 
 .category-list-item {
   display: flex;
   align-items: center;
   white-space: nowrap;
+  line-height: 1;
 }
 
 .item-icon {
@@ -228,6 +229,10 @@ body::before {
   height: atuo;
   align-items: center;
   justify-content: center;
+}
+
+.item-text {
+  line-height: 1;
 }
 
 .category-list-item:not(:last-child)::after {
