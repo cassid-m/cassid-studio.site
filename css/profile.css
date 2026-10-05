@@ -196,10 +196,15 @@ body::before {
 .plan-title {
   display: block;
   width: fit-content;
-  margin-bottom: 10px;
+  min-width: 80px;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  margin: 0 0 10px;
   border: 1px solid #3a3a3a;
   font-size: 12px;
   font-weight: 400;
+  line-height: 1;
   text-align: center;
 }
 
