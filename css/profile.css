@@ -201,8 +201,7 @@ body::before {
 .plan-title {
   display: inline-block;
   border: #3a3a3a 1px solid;
-  width: 50px;
-  padding: 5px 5px;
+  padding: 10px 10px;
   margin-bottom: 10px;
   font-weight: 400;
   font-size: 12px;
@@ -210,6 +209,7 @@ body::before {
 
 .category {
   display: flex;
+  flex-direction: row;
   gap: 8px;
   font-size: 14px;
 }
