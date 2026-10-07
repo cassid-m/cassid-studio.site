@@ -563,7 +563,7 @@ body::before {
     font-weight: 500;
   }
 
-  .subject-plan,
+  .category-list,
   .subject-tag {
     flex-direction: column;
   }
