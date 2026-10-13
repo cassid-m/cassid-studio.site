@@ -568,12 +568,16 @@ body::before {
   .subject-tag {
     flex-direction: column;
     justify-content: flex-start;
+    align-items: left;
   }
 
   .category-list-item:not(:last-child)::after {
     content: "↓";
     margin-top: 8px;
     font-size: 9px;
+    margin-top: 5px;
+    align-items: center;
+    text-align: center;
   }
 
   .item-icon {

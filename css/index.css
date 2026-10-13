@@ -335,7 +335,7 @@ body::before {
   ------------------------------------------ */
   .fv-nav {
     position: absolute !important;
-    top: 80px !important; /* MENUテキストのすぐ下に配置 */
+    top: 70px !important; /* MENUテキストのすぐ下に配置 */
     left: 15px !important;
     margin-top: 0 !important; /* PC用の margin-top: 500px をリセット */
     margin-left: 0 !important;
@@ -396,7 +396,7 @@ body::before {
   .fv-nav.is-active ul {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px; /* メニュー項目同士の縦の間隔（お好みで調整） */
     padding: 0;
     margin: 0;
