@@ -228,6 +228,7 @@ body::before {
 .category-list-item {
   display: flex;
   align-items: center;
+
   white-space: nowrap;
   line-height: 1;
 }
@@ -566,6 +567,7 @@ body::before {
   .category-list,
   .subject-tag {
     flex-direction: column;
+    justify-content: flex-start;
   }
 
   .category-list-item:not(:last-child)::after {
