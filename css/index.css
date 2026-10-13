@@ -335,7 +335,7 @@ body::before {
   ------------------------------------------ */
   .fv-nav {
     position: absolute !important;
-    top: 70px !important; /* MENUテキストのすぐ下に配置 */
+    top: 65px !important; /* MENUテキストのすぐ下に配置 */
     left: 15px !important;
     margin-top: 0 !important; /* PC用の margin-top: 500px をリセット */
     margin-left: 0 !important;
@@ -377,7 +377,7 @@ body::before {
     top: 0 !important;
     left: 0 !important;
     width: 100vw !important;
-    height: 100vh !important;
+    height: calc(100vh-20px) !important;
 
     /* ★ここを追加：PC用のマージン（margin-top: 500pxなど）を消す */
     margin: 0 !important;
