@@ -39,7 +39,7 @@ body::before {
 }
 
 .fv-textarea {
-  margin-top: 280px;
+  margin-top: 240px;
   margin-left: 80px;
   font-size: 16px;
   font-weight: 500;
@@ -51,7 +51,7 @@ body::before {
   background-color: #3a3a3a;
   color: #f3f3f3;
   padding: 8px 20px;
-  margin-bottom: 30px;
+  gap: 30px;
 }
 
 .text-position {
@@ -63,7 +63,7 @@ body::before {
 .text-position::before {
   content: "";
   display: block;
-  width: 20px;
+  width: 60px;
   height: 1px;
   margin: 20px auto;
   background-color: #3a3a3a;
