@@ -47,6 +47,18 @@ body::before {
   letter-spacing: 0.02em;
 }
 
+.text-tag {
+  background-color: #3a3a3a;
+  color: #f3f3f3;
+  padding: 8px 20px;
+  margin-bottom: 25px;
+}
+
+.text-position {
+  font-size: 12px;
+  font-weight: 400;
+}
+
 /* navセクション */
 
 .fv-nav {
