@@ -57,6 +57,16 @@ body::before {
 .text-position {
   font-size: 12px;
   font-weight: 400;
+  text-align: center;
+}
+
+.text-position::before {
+  content: "";
+  width: 20px;
+  height: 1px;
+  margin: 20px auto;
+  background-color: #3a3a3a;
+  align-items: center;
 }
 
 /* navセクション */
