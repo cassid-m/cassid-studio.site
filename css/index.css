@@ -48,10 +48,11 @@ body::before {
 }
 
 .text-tag {
+  display: inline-block;
   background-color: #3a3a3a;
   color: #f3f3f3;
   padding: 8px 20px;
-  gap: 30px;
+  margin-bottom: 20px;
 }
 
 .text-position {
